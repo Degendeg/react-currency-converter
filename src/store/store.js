@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from "zustand"
 
 const useCurrencyStore = create((set) => ({
     amount: 0,
@@ -27,6 +27,6 @@ const useCurrencyStore = create((set) => ({
             console.error("Failed to fetch exchange rate:", error)
         }
     }
-}));
+}))
 
 export default useCurrencyStore
