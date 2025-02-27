@@ -1,7 +1,7 @@
 import { create } from "zustand"
 
 const useCurrencyStore = create((set) => ({
-    amount: 0,
+    amount: null,
     from: "EUR",
     to: "SEK",
     rate: null,
