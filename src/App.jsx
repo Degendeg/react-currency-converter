@@ -30,9 +30,9 @@ function App() {
             <div class="pb-[5vh]">
               <h1 className="text-2xl text-black font-bold mb-4">Currency Converter</h1>
               <input
-                autoFocus
                 type="number"
                 step="0.01"
+                inputMode="decimal"
                 value={amount}
                 onChange={(e) => handleValue(e)}
                 className="p-2 border rounded text-black"
