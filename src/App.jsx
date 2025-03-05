@@ -34,8 +34,9 @@ function App() {
                 step="0.01"
                 inputMode="decimal"
                 value={amount}
+                placeholder="€ EUR"
                 onChange={(e) => handleValue(e)}
-                className="p-2 border rounded text-black"
+                className="p-2 border rounded text-black text-center text-xl"
               />
               <p className="mt-4 text-xl text-black">
                 {amount} {from} = <span className="font-bold">{convertedAmount} {to}</span>
