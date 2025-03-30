@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    allowedHosts: ['b8e6-85-225-9-207.ngrok-free.app']
+  build: {
+    rollupOptions: {
+      // Remove the `external` option or only use it if you have a specific reason.
+    }
+  },
+  define: {
+    'process.env': process.env
   }
-})
+});
