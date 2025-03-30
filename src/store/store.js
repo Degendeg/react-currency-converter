@@ -16,7 +16,7 @@ const useCurrencyStore = create((set) => ({
 
     fetchRate: async () => {
         try {
-            const response = await fetch(process.env.VITE_CURRENCY_URL || import.meta.env.VITE_CURRENCY_URL)
+            const response = await fetch(import.meta.env.VITE_CURRENCY_URL)
             const data = await response.json()
             if (data.eur && data.eur.sek) {
                 setTimeout(() => {
