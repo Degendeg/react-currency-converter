@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Ändra till din produktionsgren om nödvändigt
 
+permissions:
+  id-token: write  # ✅ Nödvändig för inloggning med Azure OIDC
+  contents: read
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
