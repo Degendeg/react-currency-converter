@@ -6,12 +6,21 @@ const useCurrencyStore = create((set) => ({
     to: "SEK",
     rate: null,
     convertedAmount: 0,
+    deductPercentage: 0.9,
+    deductedAmount: 0,
 
     setAmount: (amt) => set({ amount: amt }),
+
+    setDeductPercentage: (dperc) => set({ deductPercentage: dperc }),
 
     updateConvertedAmount: () =>
         set((state) => ({
             convertedAmount: (state.amount * state.rate).toFixed(2),
+        })),
+
+    deductConvertedAmount: () =>
+        set((state) => ({
+            deductedAmount: (state.convertedAmount * state.deductPercentage),
         })),
 
     fetchRate: async () => {

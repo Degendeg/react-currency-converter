@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 input:focus,
 select:focus,
 textarea:focus,
@@ -17,6 +11,12 @@ button:focus {
 
 input[type=number] {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.no-spin::-webkit-outer-spin-button,
+.no-spin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .wrapper {
