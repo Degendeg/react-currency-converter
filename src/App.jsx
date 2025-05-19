@@ -43,8 +43,12 @@ function App() {
   }
 
   const handleKeyDown = (e) => {
-    if (e.key !== "ArrowUp" && e.key !== "ArrowDown" && e.key !== "Tab") {
-      e.preventDefault()
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+    if (!isMobile) {
+      if (e.key !== "ArrowUp" && e.key !== "ArrowDown" && e.key !== "Tab") {
+        e.preventDefault()
+      }
     }
   }
 
